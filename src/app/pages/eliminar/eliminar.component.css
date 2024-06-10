@@ -1,0 +1,51 @@
+/* src/app/components/eliminar/eliminar.component.css */
+.table-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .button-space {
+    padding-top: 2%;
+    bottom: 10px; /* Adjust as needed */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  tr:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+  }
+  
+  tr.selected {
+    background-color: #c0c0c0; /* Darker background color for selected row */
+  }
+  
+  button {
+    background-color: #6d4444;
+    width: max-content;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 0.3s ease; /* Complete transition property */
+  }
+  
+  button:hover {
+    background-color: #ff8b8b;
+    
+  }

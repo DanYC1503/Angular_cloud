@@ -1,0 +1,29 @@
+<!-- src/app/components/eliminar/eliminar.component.html -->
+<div class="table-container">
+    <h2>Client List</h2>
+    <table>
+      <thead>
+        <tr>
+            <th>ID</th>
+          <th>DNI</th>
+          <th>Nombre</th>
+          <th>Direccion</th>
+          <th>Telefono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios" (click)="selectUsuario(usuario)" [class.selected]="selectedUsuario === usuario">
+            <td>{{ usuario.codigo }}</td>
+            <td>{{ usuario.cedula }}</td>
+          <td>{{ usuario.nombre }}</td>
+          <td>{{ usuario.direccion }}</td>
+          <td>{{ usuario.telefono }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="button-space">
+        <button (click)="deleteSelectedUsuario()">Eliminar</button>
+    </div>
+</div>
+
+  

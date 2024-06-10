@@ -1,0 +1,52 @@
+<section>
+    <div class="table-container">
+        <h2>Client List</h2>
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios" (click)="selectUsuario(usuario)" [class.selected]="selectedUsuario === usuario">
+                <td>{{ usuario.codigo }}</td>
+                <td>{{ usuario.cedula }}</td>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.direccion }}</td>
+            <td>{{ usuario.telefono }}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="form_space">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="dni">DNI:</label>
+              <input type="text" id="dni" [(ngModel)]="selectedUsuario.cedula" name="dni" required>
+            </div>
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" [(ngModel)]="selectedUsuario.nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="direccion">Direccion:</label>
+              <input type="text" id="direccion" [(ngModel)]="selectedUsuario.direccion" name="direccion" required>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Telefono:</label>
+              <input type="text" id="telefono" [(ngModel)]="selectedUsuario.telefono" name="telefono" required>
+            </div>
+            <button type="submit">Actualizar</button>
+          </form>
+          
+          
+    </div>
+      
+      
+      
+</section>
+  
